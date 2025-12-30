@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --primary-color: #475b7d;
+    --secondary-color: #6480b2;
+    --tertiary-color: #c2b7ca;
+    --quaternary-color: #b19a82;
+    --bkgd-color: #d3dbec;
+    --font-family: 'Nunito', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Nunito, sans-serif;
+    color: var(--primary-color)
+}
+
+/* fonts */
+h1 {
+    color: var(--primary-color);
+    font-family: josefin sans, sans-serif;
+    font-weight: 450;
+    font-size: 50px;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-family: josefin sans, sans-serif;
+    font-weight: 350;
+    font-size: 35px;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    color: var(--secondary-color);
+    font-size: 18px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* nav */
+nav {
+    margin: 2em auto 2em auto;  /* top right bottom left, auto for right and left = automatically center horizontally */
+    width: min(1000px, 100%);   /* max width reaches 1000px, never more than 100% of screen size */
+
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+nav a:hover {
+    color: var(--tertiary-color);
+}
+
+/* header */
+.banner-image {
+    width: 100%; /* Ensures the image is responsive */
+    height: auto;
+}
+
+.welcome-text {
+    margin: 2em auto;
+    width: min(80em, 100%);
+    flex: 0 1 auto; 
+    /* 
+    flex-grow = 0 means text doesn't grow to fill extra space even when expanded
+    flex-shrink = 1 means the text will shrink when space is too small
+    flex-basis = initial size of text
+    allows the text to shrink and grow as needed */
+}
+
+.choose-subject-button a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: nunito, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    /*background-color: var(--bkgd-color);
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 1em;*/
+}
+
+.choose-subject-button a:hover {
+    color: var(--tertiary-color);
+}
+
+/* choose subject section */
+.choose-subject-container {
+    margin: 2em auto;
+    width: min(80em, 100%);
+}
+
+.subject-cards {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    margin-top: 1em;
+}
+
+.physiology, .biology {
+    display: inline-block;
+    gap: 2em;
+    background-color: var(--bkgd-color);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.choose-subject-container a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.choose-subject-container a:hover {
+    color: var(--tertiary-color);
+}
