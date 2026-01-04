@@ -23,13 +23,39 @@ html {
     height: 100%;
 }
 
+/*hero background*/
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url("images/experimatics_bkgd.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+    /* DARK OVERLAY */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* adjust darkness */
+    z-index: 1;
+}
+
+    /* KEEP CONTENT ABOVE OVERLAY */
+.hero > * {
+    position: relative;
+    z-index: 2;
+}
+
 /* fonts */
 h1 {
     color: var(--primary-color);
     font-family: josefin sans, sans-serif;
     font-weight: 450;
     font-size: 50px;
-    margin: 2em auto 0.5em 2em;
+    margin: 0em auto 0.5em 2em;
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
@@ -46,15 +72,18 @@ h2 {
 p {
     color: var(--secondary-color);
     font-size: 18px;
-    margin-top: 1em;
+    margin-top: 0em;
     margin-bottom: 1em;
 }
 
 /* nav */
 nav {
-    margin: 2em auto 2em auto;  /* top right bottom left, auto for right and left = automatically center horizontally */
-    width: min(80em, 100%);   /* max width reaches 1000px, never more than 100% of screen size */
-    
+
+    position: absolute;
+    margin: 0 auto 0em auto;  /* top right bottom left, auto for right and left = automatically center horizontally */
+    margin-top: 0;
+    width: min(100%, 100%);   /* max width reaches 1000px, never more than 100% of screen size */
+    padding: 0em 5em;  /* top/bottom left/right */
 }
 
 nav ul {
@@ -79,14 +108,9 @@ nav a:hover {
 }
 
 /* header */
-.banner-image {
-    width: 100%; /* Ensures the image is responsive*/
-    height: auto;
-}
-
 
 .welcome-text {
-    margin: 2em auto;
+    position: relative;
     width: min(20em, 100%);
     width: 40em;
     flex: 0 1 auto;
@@ -96,6 +120,8 @@ nav a:hover {
     flex-basis = initial size of text
     allows the text to shrink and grow as needed 
     */
+    left: 5em;
+    top: 25em;
 }
 
 .banner-text, .about-text {
@@ -122,116 +148,47 @@ nav a:hover {
 /* choose subject section */
 .choose-subject-container {
     margin: 3em auto;
-    width: min(75em, 100%);
+    width: min(80em, 100%);
     display: flex;
+    flex-wrap: wrap;
     /*justify-content: center;*/
     gap: 3em;
 }
 
-.physiology, .biology {
+.subject-button {
+    position: relative;
     display: inline-block;
-    background-color: var(--bkgd-color);
-    padding: 1.5em;
     border-radius: 1em;
     border: none;
-    color: var(--secondary-color);
     font-family: nunito, sans-serif;
+    padding: 0;
+    overflow: hidden;
 }
 
-.physiology a, .biology a {
+.subject-button a {
+    position: absolute;
     text-decoration: none;
-    color: var(--secondary-color);
-    font-size: 16px;
-}
-
-.physiology:hover, .biology:hover {
-    scale: 1.15;
-}
-
-/* physio section */
-
-.systems-dropdown {
-    margin: 2em auto;
-    width: min(80em, 100%);
-    background-color: var(--bkgd-color);
-    padding: 1.5em;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 4em;
     border-radius: 1em;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.systems-dropdown summary {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--primary-color);
-    font-family: nunito, sans-serif;
-    cursor: pointer;
-}
-
-.systems-dropdown a {
-    font-size: 18px;
-    text-decoration: none;
+.subject-button a:hover {
     color: var(--secondary-color);
 }
 
-.systems-dropdown a:hover {
-    color: var(--tertiary-color);
+.subject-button:hover {
+    scale: 1.05;
 }
 
-.systems-dropdown summary:hover {
-    color: var(--tertiary-color);
-}
-
-details a {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    margin-top: 1em;
-}
-
-details {
-    margin: 1em auto;
-    width: min(75em, 100%);
-}
-
-/* modals */
-.modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal:target {
-  display: flex;
-}
-
-.modal-content {
-  position: relative;
-  width: min(800px, 100%);
-  width: 1000px;
-  height: 80vh;
-  background: white;
-  border-radius: 1em;
-  overflow: hidden;
-}
-
-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 1em;
-}
-
-.close {
-  position: absolute;
-  top: 8px;
-  right: 15px;
-  font-size: 24px;
-  text-decoration: none;
+.subject-image {
+    width: 336px;
+    height: 252px;
+    margin: 0;
+    border-radius: 1em;
 }

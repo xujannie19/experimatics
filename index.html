@@ -4,42 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experimatics</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index-style.css">
 </head>
 <body>
-
+<div class = "hero">
      <!-- nav/header -->
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">EXPERIMATICS</a></li>
-                <li><a href="#commissions">Commissions</a></li>
-                <li><a href="physiology.html">Physiology</a></li>
-                <li><a href="biology.html">Biology</a></li>
+                <li><a href="index.html" style = "color: white;">EXPERIMATICS</a></li>
+                <li><a href="#commissions" style = "color: white;">Commissions</a></li>
+                <li><a href="physiology.html" style = "color: white;">Physiology</a></li>
+                <li><a href="biology.html" style = "color: white;">Biology</a></li>
             </ul>
         </nav>
-        <image height = 475px width = 1920px src="images/experimatics_banner.png" class = "banner-image"></image>
+        <!--<image height = 475px width = 1920px src="images/experimatics_banner.png" class = "banner-image"></image>-->
         <div class = "welcome-text">
-            <h1 class = "banner-text">WELCOME</h1>
-            <p>Welcome to Experimatics, a collection of hand-drawn interactive and animated life sciences review material. 
+            <h1 class = "banner-text" style = "color: white;">WELCOME</h1>
+            <p class = "about-text" style = "color: white;">Welcome to Experimatics, a collection of hand-drawn interactive and animated life sciences review material. 
                 This material isn't intended to replace textbooks and lectures, but rather to supplement them with visual and interactive study aids.
                 Although the material is primarily intended for high school and undergraduate students, anyone with an interest in life sciences is welcome to explore!
             </p>
             <h2 class = "choose-subject-button">
-                <a href = "#choose-subject">Choose a subject below to get started.</a>
+                <a href = "#choose-subject">Choose a subject below to get started!</a>
             </h2>
         </div>
     </header>
+</div>
 
     <!-- choose subject section -->
     <section class = "choose-subject-container" id ="choose-subject">
-        <!-- <h2>Choose a subject:</h2> -->
-        <button class = "physiology">
+
+        <h2>Choose a subject:</h2>
+        <button class = "subject-button">
+            <image src="images/physio_button.png" class = "subject-image" href="physiology.html"></image>
             <a href="physiology.html">
                 <h3>PHYSIOLOGY</h3>
             </a>
         </button>
-        <button class = "biology">
+        <button class = "subject-button">
+            <image src="images/physio_button.png" class = "subject-image"></image>
             <a href="biology.html">
                 <h3>BIOLOGY</h3>
             </a>

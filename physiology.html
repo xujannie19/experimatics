@@ -20,13 +20,15 @@
         </nav>
     </header>
 
-    <p>physio</p>
+    <image height = 300px width = 1920px src="images/experimatics_banner.png" class = "banner-image"></image>
+    
+    <h1 class = "welcome-text">PHYSIOLOGY</h1> 
 
     <!-- systems dropdown -->
     <div class = "systems-dropdown">
         <details>
             <summary>Respiratory System</summary>
-                <a href="physiology/respiratory-system-anatomy.html">respiratory system anatomy</a>
+                <a href="#resp-modal">respiratory system anatomy</a>
                 <a href="index.html">how breathing works</a>
                 <a href="index.html">lung capacities</a>
         </details>
@@ -52,5 +54,15 @@
                 <a href="index.html">menstrual cycle</a>
         </details>
     </div>
+
+    <!--modals-->
+    <!-- test -->
+    <div id = "resp-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <iframe src="physiology/respiratory-system-anatomy.html"></iframe>
+        </div>
+    </div>
+    <!-- end test -->
 </body>
 </html>

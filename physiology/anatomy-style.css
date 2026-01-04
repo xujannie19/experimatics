@@ -29,16 +29,17 @@ h1 {
     font-weight: 450;
     font-size: 50px;
     margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 h2 {
     color: var(--primary-color);
     font-family: josefin sans, sans-serif;
-    font-weight: 350;
+    font-weight: 400;
     font-size: 35px;
     margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0em;
+    margin-left: 1em;
 }
 
 p {
@@ -48,45 +49,28 @@ p {
     margin-bottom: 1em;
 }
 
-/* nav */
-nav {
-    margin: 2em auto 2em auto;  /* top right bottom left, auto for right and left = automatically center horizontally */
-    width: min(1000px, 100%);   /* max width reaches 1000px, never more than 100% of screen size */
-
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-}
-
-nav li:first-child {
-    margin-right: auto;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--secondary-color);
-}
-
-nav a:hover {
-    color: var(--tertiary-color);
-}
-
-.title {
-    text-align: justify;
-    margin: 2em auto;
-    width: min(80em, 100%);
-    flex: 0 1 auto; 
-}
-
 /* image */
 .image-container {
     position: relative; /* Establishes positioning context for children */
-    display: inline-block; /* Makes container size fit the image */
+    /*display: inline-block; /* Makes container size fit the image */
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    flex: 0 1 auto;
+}
+
+.title {
+    position: absolute;
+    text-align: center;
+    bottom: 96%;
+    left: 45%;
+    transform: translate(-50%, 0%);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .anatomy-image {
@@ -97,13 +81,14 @@ nav a:hover {
 }
 
 .button-container button {
+    position: absolute;
     background-color: var(--bkgd-color);
     font-family: nunito, sans-serif;
-    font-size: clamp(0.75vw, 18px, 2vw);
+    font-size: clamp(0.75em, 18px, 2em);
     color: var(--bkgd-color);
     border-color: var(--bkgd-color);
     border-radius: 2em;
-    padding: 0.5vw 1.2vw;          
+    padding: 0.3em 0.6em;          
 }
 
 .button-container button:hover {
