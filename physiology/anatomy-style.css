@@ -38,7 +38,7 @@ h2 {
     font-weight: 400;
     font-size: 35px;
     margin-top: 1em;
-    margin-bottom: 0em;
+    margin-bottom: -20px;
     margin-left: 1em;
 }
 
@@ -55,7 +55,7 @@ p {
     /*display: inline-block; /* Makes container size fit the image */
     width: 1000px;
     height: auto;
-    margin: auto;
+    margin-top: 50px;
     flex: 0 1 auto;
 }
 
@@ -95,4 +95,13 @@ p {
     background-color: #ffffff;
     border-width: 2px;
     color: var(--primary-color);
+}
+
+/* videos */
+
+.video-container {
+    display: block;
+    margin: 2em auto 2em auto;
+    max-width: 80%;
+    height: auto;
 }
