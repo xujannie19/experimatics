@@ -149,8 +149,8 @@ nav a:hover {
 .choose-subject-container {
     margin: 3em auto;
     width: min(80em, 100%);
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
     /*justify-content: center;*/
     gap: 3em;
 }
@@ -163,6 +163,7 @@ nav a:hover {
     font-family: nunito, sans-serif;
     padding: 0;
     overflow: hidden;
+    margin-left: 7em;
 }
 
 .subject-button a {
